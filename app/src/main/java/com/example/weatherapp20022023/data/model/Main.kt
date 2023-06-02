@@ -1,17 +1,15 @@
 package com.example.weatherapp20022023.data.model
 
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
+
 data class Main (
     val temp: Double,
-
-    @Json(name = "feels_like")
-    val feelsLike: Double,
-
-    @Json(name = "temp_min")
+    @SerializedName("temp_min")
+    @Expose
     val tempMin: Double,
-
-    @Json(name = "temp_max")
+    @SerializedName("temp_max")
+    @Expose
     val tempMax: Double,
-
-    val pressure: Long,
     val humidity: Long
 )
